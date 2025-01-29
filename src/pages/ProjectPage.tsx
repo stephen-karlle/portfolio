@@ -45,7 +45,7 @@ const ProjectPage = () => {
                 onClick={() => project.link && window.open(project.link, "_blank")}
               >
                 <EyeIcon className="w-4 h-4 stroke-2 stroke-white" />
-                Live Demo
+                Visit Site
               </button>
             )}
           </div>
