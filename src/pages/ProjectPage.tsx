@@ -1,9 +1,9 @@
 import { useParams } from "react-router"
-import LandingLayout from "../layouts/LandingLayout"
-import Carousel from "../components/Carousel"
 import { technologyColorsConstant } from "../constants/colors.constants"
 import { projectsConstants } from "../constants/projects.constants"
 import { EyeIcon } from "../icons"
+import LandingLayout from "../layouts/LandingLayout"
+import Carousel from "../components/Carousel"
 
 const ProjectPage = () => {
 

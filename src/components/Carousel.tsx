@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronIcon, CloseIcon } from '../icons';
+import { CloseIcon } from '../icons';
 
 type CarouselProps = {
   images: string[];
