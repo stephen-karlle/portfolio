@@ -4,3 +4,47 @@
 @theme {
   --font-display: 'Instrument Sans', sans-serif;
 }
+
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* gray-500 */
+  border-radius: 4px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1f2937; /* gray-950 */
+  border-radius: 4px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4b5563; /* gray-600 (lighten the thumb on hover) */
+}
+
+/* For Firefox */
+scrollbar {
+  width: 8px;
+  background-color: #1f2937; /* gray-950 */
+}
+
+scrollbar-thumb {
+  background-color: #6b7280; /* gray-500 */
+  border-radius: 4px;
+}
+
+scrollbar-thumb:hover {
+  background-color: #4b5563; /* gray-600 */
+}

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router'
 import { RefObject } from 'react'
 import Logo from '/logo.svg'
 
@@ -10,6 +11,7 @@ const Navbar = ({
 }: NavbarProps
 ) => {
 
+  const navigate = useNavigate()
   const handleScroll = (amount: number) => {
     if (scrollRef.current) {
       scrollRef.current.scrollTo({
@@ -19,11 +21,16 @@ const Navbar = ({
     }
   }
 
+  const handleClick = () => {
+    handleScroll(0)
+    navigate('/')
+  }
+
   return (
-    <nav className="bg-black/20 h-14 flex-shrink-0 rounded-xl backdrop-blur-xl sticky z-20 top-0 max-w-5xl w-full flex items-center justify-between px-6 ring-1 ring-black/20">
+    <nav className="bg-black/20 h-14 flex-shrink-0 rounded-xl backdrop-blur-xl sticky z-30 top-0 max-w-5xl w-full flex items-center justify-between px-6 ring-1 ring-black/20">
       <button 
         className="text-white text-lg font-medium text-center flex-shrink-0 cursor-pointer"
-        onClick={() => handleScroll(0)}
+        onClick={handleClick}
       > 
         <img src={Logo} alt="Karlle" className="w-6 h-6" />
       </button>
