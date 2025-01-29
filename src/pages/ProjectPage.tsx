@@ -21,7 +21,7 @@ const ProjectPage = () => {
                 <h1 className="text-2xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-start leading-tight tracking-tight">
                   {project.name}
                 </h1>
-                <div className="flex items-center justify-center">    
+                <div className="flex items-center justify-start">    
                   <span className={`w-2 h-2 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full mr-2 flex items-center justify-center relative`}>
                     <span className={`w-2 h-2 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full animate-ping flex-shrink-0 absolute`} />
                   </span>
