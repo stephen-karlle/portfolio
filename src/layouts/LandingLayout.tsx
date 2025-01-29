@@ -19,7 +19,7 @@ const LandingLayout = ({
       {/* .-. */}
       <article className="z-10 w-full flex flex-col items-center justify-center ">
         <Navbar scrollRef={scrollRef} />
-        <div>
+        <div className="w-full max-w-5xl">
           {children}
         </div>
         <section className="max-w-5xl relative w-full flex flex-col justify-center items-center pt-4 ">
