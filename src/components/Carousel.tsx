@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CloseIcon } from '../icons';
+// import { motion, AnimatePresence } from 'framer-motion';
+// import { CloseIcon } from '../icons';
 
 type CarouselProps = {
   images: string[];
@@ -8,7 +8,7 @@ type CarouselProps = {
 
 const Carousel = ({ images }: CarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [isViewerOpen, setIsViewerOpen] = useState(false);
+  // const [isViewerOpen, setIsViewerOpen] = useState(false);
   const thumbnailRef = useRef<HTMLDivElement>(null);
 
   const imageAnimation = {
@@ -22,15 +22,15 @@ const Carousel = ({ images }: CarouselProps) => {
   };
 
   // Open image viewer modal when clicking an image
-  const openImageViewer = (index: number) => {
-    setCurrentImage(index);
-    setIsViewerOpen(true);
-  };
+  // const openImageViewer = (index: number) => {
+  //   setCurrentImage(index);
+  //   setIsViewerOpen(true);
+  // };
 
-  // Close image viewer modal
-  const closeImageViewer = () => {
-    setIsViewerOpen(false);
-  };
+   // Close image viewer modal
+  // const closeImageViewer = () => {
+  //   setIsViewerOpen(false);
+  // };
 
   // Handle keypress for left/right arrow keys
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -62,16 +62,16 @@ const Carousel = ({ images }: CarouselProps) => {
   }, [currentImage]);
 
   // Prevent modal click propagation
-  const handleModalClick = (event: React.MouseEvent) => {
-    event.stopPropagation();
-  };
+  // const handleModalClick = (event: React.MouseEvent) => {
+  //   event.stopPropagation();
+  // };
 
   return (
     <section className="flex flex-col gap-6 w-full h-fit rounded-lg overflow-hidden">
       {/* Main image carousel */}
       <div
         style={imageAnimation}
-        className="flex overflow-clip rounded-lg cursor-pointer"
+        className="flex overflow-clip rounded-lg"
       >
         {images.map((image, index) => (
           <img
@@ -79,7 +79,7 @@ const Carousel = ({ images }: CarouselProps) => {
             src={image}
             alt=""
             className="object-cover aspect-3/2 w-full overflow-hidden h-full rounded-lg"
-            onClick={() => openImageViewer(index)}
+            // onClick={() => openImageViewer(index)}
           />
         ))}
       </div>
@@ -91,9 +91,9 @@ const Carousel = ({ images }: CarouselProps) => {
       >
         {images.map((image, index) => (
           <button
-            key={index}
             onClick={() => handleSelectImage(index)}
             className="flex-shrink-0"
+            key={index}
           >
             <img
               src={image}
@@ -105,7 +105,7 @@ const Carousel = ({ images }: CarouselProps) => {
         ))}
       </div>
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isViewerOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -136,7 +136,7 @@ const Carousel = ({ images }: CarouselProps) => {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </section>
   );
 };
