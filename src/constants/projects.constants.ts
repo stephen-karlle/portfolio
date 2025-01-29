@@ -49,7 +49,7 @@ export const projectsConstants = [
       "Skill posting functionality for users to share their expertise.",
       "Realtime messaging system for user communication.",
     ],
-    description: "A social media platform that allows users to swap their skills with other users. Users can post their skills and search for other users with the skills they need.",
+    description: "A social media platform that allows users to swap their skills with other users. Users can post their skills and message other users for skill exchange.",
     isFeatured: true,
     isDeployed: true,
     createdAt: "September 16th 2023"

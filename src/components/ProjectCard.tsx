@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 type ProjectCardProps = {
   name: string;
   images: string[];
-  tags: string[];
   description: string;
   createdAt: string;
 }
@@ -12,7 +11,6 @@ type ProjectCardProps = {
 const ProjectCard = ({
   name,
   images,
-  tags,
   description,
   createdAt
 }: ProjectCardProps) => {
@@ -36,11 +34,6 @@ const ProjectCard = ({
           <p className="text-gray-400 text-xs mt-2 text-start line-clamp-2">{createdAt}</p>
         </div>
         <p className="text-gray-400 text-sm mt-4 text-start line-clamp-3">{description}</p>
-        <div className="flex flex-wrap items-start justify-start gap-2 w-full mt-4">
-          {tags.map((tag, index) => (
-            <span key={index} className="text-gray-400 text-xs px-2 py-1 bg-gray-400/10 rounded-md">{tag}</span>
-          ))}
-        </div>
       </div>
     </Link>
   )
