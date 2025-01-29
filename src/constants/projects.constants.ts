@@ -28,7 +28,7 @@ export const projectsConstants = [
     description: "A web-based system that allows patients to book an appointment, view their dental records, and chat with a chatbot assistant for dental questions.",
     isFeatured: true,
     isDeployed: true,
-    createdAt: "November 26th 2024",
+    createdAt: "Nov 26th 2024",
   },
   {
     name: "SkillSwap",
@@ -54,7 +54,7 @@ export const projectsConstants = [
     description: "A social media platform that allows users to swap their skills with other users. Users can post their skills and message other users for skill exchange.",
     isFeatured: true,
     isDeployed: true,
-    createdAt: "September 16th 2023"
+    createdAt: "Sep 16th 2023"
   },
   {
     name: "DocuTrace",
@@ -79,7 +79,7 @@ export const projectsConstants = [
     description: "A cloud-based system that allows employees to track their documents, request for documents, and receive notifications for document updates.",
     isFeatured: false,
     isDeployed: true,
-    createdAt: "December 3rd 2024"
+    createdAt: "Dec 3rd 2024"
   },
   {
     name: "Pampanga Tourista",
@@ -104,7 +104,7 @@ export const projectsConstants = [
     description: "A web-based system that allows tourists to view tourist spots in Pampanga, view reviews, and book a tour guide.",
     isFeatured: false,
     isDeployed: true,
-    createdAt: "September 12th 2024",
+    createdAt: "Sep 12th 2024",
   },
   {
     name: "CerTrack",
@@ -128,7 +128,7 @@ export const projectsConstants = [
     description: "A web-based system that allows users to track their certificates, request for certificates, and receive notifications for training updates.",
     isFeatured: false,
     isDeployed: true,
-    createdAt: "September 1st 2024"
+    createdAt: "Sep 1st 2024"
   },
   {
     name: "FarmSphere",
@@ -152,6 +152,6 @@ export const projectsConstants = [
     description: "A web-based system that allows users to track their certificates, request for certificates, and receive notifications for training updates.",
     isFeatured: false,
     isDeployed: false,
-    createdAt: "October 9th 2024",
+    createdAt: "Oct 9th 2024",
   },
 ]
