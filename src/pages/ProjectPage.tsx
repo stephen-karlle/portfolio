@@ -20,16 +20,14 @@ const ProjectPage = () => {
               <h1 className="text-2xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-start leading-tight tracking-tight">
                 {project.name}
               </h1>
-              <div className="flex items-center justify-center">
-                
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex items-center justify-center relative">
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-ping flex-shrink-0 absolute" />
+              <div className="flex items-center justify-center">    
+                <span className={`w-2 h-2 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full mr-2 flex items-center justify-center relative`}>
+                  <span className={`w-2 h-2 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full animate-ping flex-shrink-0 absolute`} />
                 </span>
-                <p className="text-green-500 text-xs font-medium">
+                <p className={`${project.isDeployed ? "text-green-500" : "text-amber-500"} text-xs font-medium`}>
                   {project.isDeployed ? "Deployed" : "Prototype"}
                 </p>
                 <span className="w-2 h-[1px] bg-gray-400 rounded-full mx-2 flex items-center justify-center relative" />
-
                 <p className="text-gray-400 text-xs">
                   {project.createdAt}
                 </p>
