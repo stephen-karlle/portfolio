@@ -99,7 +99,7 @@ const Carousel = ({ images }: CarouselProps) => {
               src={image}
               alt={`Thumbnail ${index}`}
               className={`object-cover aspect-3/2 w-16 rounded-sm transition-all duration-200 ease-in-out hover:scale-110
-                ${currentImage === index ? 'scale-110 ring-1 ring-white' : ''}`}
+                ${currentImage === index ? 'scale-110 outline-1 outline-white outline-offset-3' : ''}`}
             />
           </button>
         ))}
