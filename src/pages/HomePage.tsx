@@ -158,8 +158,8 @@ const HomePage = () => {
         </h1>
         
         <p className="text-gray-400 text-center text-base sm:text-lg z-10 mt-4 leading-7">
-          I've develop a variety of websites, from simple system to
-          <span className="inline sm:block "> complex web applications. Here are the latest ones. </span>
+          Over the past 6+ years, I've worked on a wide range of websites, from basic
+          <span className="inline sm:block"> websites to complex web systems. Below are some of my recent projects. </span>
         </p>
 
         <div className="w-full max-w-3xl mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
