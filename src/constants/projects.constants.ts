@@ -10,6 +10,7 @@ export const projectsConstants = [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738159765/cloudsmiles/cq1prekhqieyr2hmiqrt.webp",
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738159765/cloudsmiles/s2jnjsskuvdllocxtihp.webp",
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738166979/cloudsmiles/hndaxuroe0swxmxbswj1.webp",
+      "https://res.cloudinary.com/dy5j494og/image/upload/v1738168174/cloudsmiles/xuwgkfefrtcguqmkfqgw.webp",
     ],
     link: "https://www.vsdentalph.com",
     technologies: ["React", "MongoDB", "ExpressJS", "Cohere", "Cloudinary", "Redis", "TypeScript", "TailwindCSS"],
