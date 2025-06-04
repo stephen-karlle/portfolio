@@ -13,7 +13,10 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: [
     '192.168.254.101',
     'http://localhost:5173',
-  ]
+  ],
+  experimental: {
+      scrollRestoration: true,
+  }
 };
 
 export default nextConfig;
