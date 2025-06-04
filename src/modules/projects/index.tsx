@@ -1,5 +1,6 @@
 "use client"
 
+import { ContainerIcon } from "@icons"
 import { projectsData } from "@data/projects"
 import { useInView } from "@hooks/useInView"
 import { motion } from "motion/react"
@@ -10,8 +11,6 @@ import FolderCard from "./card/folder-card"
 import ProjectCard from "./card/project-card"
 import Header from "./header/header"
 import Glows from "@components/effects/glows"
-import { ContainerIcon } from "@icons"
-import Vignette from "@components/effects/vignette"
 
 const glows = [
   "absolute rotate-45 right-45 top-45 w-[20rem] h-12 rounded-full blur-3xl opacity-20 bg-gradient-to-r from-violet-500 via-violet-400 to-violet-500",
