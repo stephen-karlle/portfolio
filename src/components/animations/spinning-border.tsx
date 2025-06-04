@@ -5,9 +5,9 @@ type SpinningBorderProps = {
 }
 
 const SpinningBorder = ({
-  fromColor = '#E2CBFF',
-  viaColor = '#393BB2',
-  toColor = '#E2CBFF',
+  fromColor = '#8b5cf6',
+  viaColor = '#ede9fe',
+  toColor = '#8b5cf6',
 }: SpinningBorderProps) => {
   return (
     <span

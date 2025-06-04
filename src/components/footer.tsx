@@ -4,6 +4,10 @@ import Link from 'next/link';
 
 const Footer = () => {
 
+  const behance = process.env.NEXT_PUBLIC_BEHANCE!
+  const github = process.env.NEXT_PUBLIC_GITHUB!
+  const linkedin = process.env.NEXT_PUBLIC_LINKEDIN!
+  
   const handleNavigate = (id: string | number) => {
     if (typeof id === "number") {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -15,6 +19,20 @@ const Footer = () => {
       window.history.replaceState(null, "", `#${id}`);
     }
   };
+
+  const handleRedirect = (name: string) => {
+    switch (name) {
+      case "behance":
+        window.open(behance, "_blank");
+        break;
+      case "github":
+        window.open(github, "_blank");
+        break;
+      case "linkedin":
+        window.open(linkedin, "_blank");
+        break;
+    }
+  }
 
 
   return (
@@ -42,8 +60,8 @@ const Footer = () => {
 
           <div className="hidden sm:flex items-end ">
             <div className="flex items-center justify-stendrt w-fit">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex items-center justify-center relative">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-ping flex-shrink-0 absolute" />
+              <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 flex items-center justify-center relative">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-ping flex-shrink-0 absolute" />
               </span>
               <p className="text-gray-100 text-sm tracking-tight cursor-pointer ">
                 All Projects Operational
@@ -63,7 +81,7 @@ const Footer = () => {
                 <button
                   key={index}
                   className="text-gray-200 font-normal text-sm tracking-tight cursor-pointer capitalize w-20 text-start hover:underline"
-                  onClick={() => handleNavigate(item.toLocaleLowerCase())}
+                  onClick={() => handleRedirect(item.toLocaleLowerCase())}
                 >
                   {item}
                 </button>

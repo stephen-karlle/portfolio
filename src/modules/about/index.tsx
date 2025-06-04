@@ -2,6 +2,7 @@ import BeamBorder from "@components/animations/beam-border"
 import Vignette from "@components/effects/vignette"
 import Topbar from "./topbar"
 import Panels from "./panels"
+import { UserIcon } from "@icons"
 
 
 
@@ -12,7 +13,13 @@ const About = () => {
     <section id="about" className="w-full flex flex-col justify-center items-center z-10 max-w-4xl relative">
 
       <div className="w-full flex flex-col items-center md:items-start justify-center mb-12"> 
-        <h1 className="text-4xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-center md:text-start leading-tight tracking-tight mt-24">
+        <div className="flex flex-row items-center justify-center mb-4 mt-24">
+          <UserIcon className="w-4 h-4 stroke-2 stroke-green-500" />
+          <p className="text-gray-200 text-sm font-medium ml-2 ">
+            Background
+          </p>
+        </div>
+        <h1 className="text-4xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-center md:text-start leading-tight tracking-tight ">
           Behind the Code
         </h1>
         <p className="text-gray-400 text-center md:text-start text-sm md:text-base mt-2 md:leading-7">
@@ -21,7 +28,7 @@ const About = () => {
         </p>
       </div>
 
-      <section className="min-h-[30rem] max-h-[30rem] md:min-h-[50rem] md:max-h-[50rem] h-full flex items-center justify-center w-full rounded-xl p-2 relative bg-primary">
+      <section className="min-h-[40rem] max-h-[40rem] md:min-h-[50rem] md:max-h-[50rem] h-full flex items-center justify-center w-full rounded-xl p-2 relative bg-primary">
         <BeamBorder size={200} />
         <div className="hidden md:flex flex-col w-4 h-full items-end justify-center absolute left-4 z-20">
           {[1,2,3,4].map((_, index) => (

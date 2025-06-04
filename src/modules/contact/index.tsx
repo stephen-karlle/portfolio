@@ -19,12 +19,17 @@ const Contact = () => {
       <Vignette top left right size="32" color=" from-primary to-transparent" className="z-40" />
       <Glows glows={glows} />
       <div className="w-full flex flex-col items-center justify-center z-40">
+        <div className="flex flex-row items-center justify-center mb-4 mt-24">
+          <ArrowIcon className="w-4 h-4 stroke-2 stroke-yellow-500 -rotate-45" />
+          <p className="text-gray-200 text-sm font-medium ml-2 ">
+            Connect
+          </p>
+        </div>
         <h1 className="text-4xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-center leading-tight z-10 tracking-tight">
           Ready to work together?
         </h1>
         <p className="text-gray-400 text-sm md:text-base z-10 mt-4 mb-8 md:leading-7 text-center w-10/12 md:w-8/12">
-          I&apos;m open to full-time roles and freelance projects. If you&apos;re looking for someone to bring clarity, creativity, and clean code to your team — let&apos;s talk.
-
+          I&apos;m open to full-time roles and freelance projects. If you&apos;re looking for someone to bring clarity, creativity, and clean code to your team — let&apos;s connect.
         </p>
         <Button 
           beam

@@ -10,6 +10,8 @@ import FolderCard from "./card/folder-card"
 import ProjectCard from "./card/project-card"
 import Header from "./header/header"
 import Glows from "@components/effects/glows"
+import { ContainerIcon } from "@icons"
+import Vignette from "@components/effects/vignette"
 
 const glows = [
   "absolute rotate-45 right-45 top-45 w-[20rem] h-12 rounded-full blur-3xl opacity-20 bg-gradient-to-r from-violet-500 via-violet-400 to-violet-500",
@@ -21,22 +23,21 @@ const Projects = () => {
 
   return (
     <section id="projects" className="relative w-full flex flex-col justify-center items-center z-10 max-w-4xl gap-20">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-12 items-center justify-center"> 
-        <h1 className="text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-center md:text-start leading-tight z-10 tracking-tight">
-          Latest Projects with<br />
-          Modern Features
-        </h1>
-        <p className="text-gray-400 text-center md:text-start text-sm md:text-base z-10 md:leading-7">
-          Over the past 3+ years, I&apos;ve worked on a wide range of websites, from basic
-          websites to complex web systems. Below are some of my recent projects. 
-        </p>
-        {/* <h1 className="text-2xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-center leading-tight z-10 tracking-tight">
-          Latest Projects with m
+      <div className="w-full flex flex-col items-center justify-center"> 
+        <div className="flex flex-row items-center justify-center mb-4">
+          <ContainerIcon className="w-4 h-4 stroke-2 stroke-red-500" />
+          <p className="text-gray-200 text-sm font-medium ml-2 ">
+            Projects
+          </p>
+        </div>
+        <h1 className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-center leading-tight z-10 tracking-tight">
+          Latest Projects
         </h1>
 
-        <p className="text-gray-400 text-center text-xl z-10 ">
-          Here are some of my personal favorites.
-        </p> */}
+        <p className="text-gray-400 text-center text-sm md:text-base z-10 w-8/12 ">
+          I&apos;ve worked on a wide range of websites, from basic
+          websites to complex web systemsHere are some of my personal favorites.
+        </p>
       </div>
 
       <div className="relative h-72 md:h-[50rem] w-full flex items-center justify-center transform-3d transform-gpu will-change-transform scale-40 md:scale-75 lg:scale-100 ">
