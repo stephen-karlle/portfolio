@@ -35,7 +35,7 @@ const Projects = () => {
 
         <p className="text-gray-400 text-center text-sm md:text-base z-10 w-8/12 ">
           I&apos;ve worked on a wide range of websites, from basic
-          websites to complex web systemsHere are some of my personal favorites.
+          websites to complex web systems. Here are some of my personal favorites.
         </p>
       </div>
 
