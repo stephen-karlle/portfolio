@@ -45,7 +45,7 @@ const Hero = () => {
       
       <GridLines className="[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] h-[50rem] z-0 absolute -top-20" squares={squares} />
       <div className="p-2 flex items-center justify-center bg-gradient-to-r from-gray-900 to-transparent rounded-full mb-4">
-        <span className="relative inline-flex overflow-hidden rounded-full p-[1px]">
+{/*         <span className="relative inline-flex overflow-hidden rounded-full p-[1px]">
           <SpinningBorder />
           <p className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-primary px-3 py-1 font-normal text-xs md:text-sm text-white ">
             <SparklesIcon className="w-4 h-4 fill-gray-200 inline mr-1" />
@@ -55,7 +55,7 @@ const Hero = () => {
               La Rose Noire
             </Link>
           </p>
-        </span>
+        </span> */}
       </div>        
       <h1 className="text-5xl sm:text-6xl font-semibold text-center leading-tight z-10 tracking-tight">
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 ">
