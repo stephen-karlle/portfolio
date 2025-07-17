@@ -1,12 +1,10 @@
 
-import { ArrowIcon, CheckIcon, CopyIcon, DownloadIcon, SparklesIcon } from "@icons/index";
+import { ArrowIcon, CheckIcon, CopyIcon, DownloadIcon } from "@icons/index";
 import { RotatingText } from "@components/animations/rotating-text";
 import { useState } from "react";
-import SpinningBorder from "@components/animations/spinning-border";
 import GridLines from "@components/effects/grid-lines";
 import Glows from "@components/effects/glows";
 import Button from "@components/ui/button";
-import Link from "next/link";
 
 const squares: Array<[x: number, y: number]> = [[4, 4],[5, 1],[8, 2],[5, 3],[5, 5],[10, 10],[12, 15],[15, 10],[10, 15],];
 const glows = [
