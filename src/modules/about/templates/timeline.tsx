@@ -30,7 +30,7 @@ const Timeline = ({date, title, organization, location, responsibilities}: Timel
         <div className="flex flex-col items-start justify-start gap-1">
           <h1 className="text-gray-200 text-lg font-medium tracking-tight">{title}</h1>
           <p className="text-gray-500 text-base font-medium">
-            {organization.url && (
+            {organization.logo && (
               <span className="inline-flex items-center mr-2 align-middle">
                 <Image 
                   src={organization.logo ?? ""} 

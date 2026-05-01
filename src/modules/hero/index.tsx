@@ -1,10 +1,12 @@
 
-import { ArrowIcon, CheckIcon, CopyIcon, DownloadIcon } from "@icons/index";
+import { ArrowIcon, CheckIcon, CopyIcon, DownloadIcon, SparklesIcon } from "@icons/index";
 import { RotatingText } from "@components/animations/rotating-text";
 import { useState } from "react";
 import GridLines from "@components/effects/grid-lines";
 import Glows from "@components/effects/glows";
 import Button from "@components/ui/button";
+import Link from "next/link";
+import SpinningBorder from "@components/animations/spinning-border";
 
 const squares: Array<[x: number, y: number]> = [[4, 4],[5, 1],[8, 2],[5, 3],[5, 5],[10, 10],[12, 15],[15, 10],[10, 15],];
 const glows = [
@@ -43,17 +45,17 @@ const Hero = () => {
       
       <GridLines className="[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] h-[50rem] z-0 absolute -top-20" squares={squares} />
       <div className="p-2 flex items-center justify-center bg-gradient-to-r from-gray-900 to-transparent rounded-full mb-4">
-{/*         <span className="relative inline-flex overflow-hidden rounded-full p-[1px]">
+        <span className="relative inline-flex overflow-hidden rounded-full p-[1px]">
           <SpinningBorder />
           <p className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-primary px-3 py-1 font-normal text-xs md:text-sm text-white ">
             <SparklesIcon className="w-4 h-4 fill-gray-200 inline mr-1" />
       
             Working at{" "}    
-            <Link href="https://la-rose-noire.com" className="font-medium ml-1 hover:underline underline-offset-2 decoration-white" target="_blank" rel="noopener noreferrer">
-              La Rose Noire
+            <Link href="https://www.grantthornton.com.ph/" className="font-medium ml-1 hover:underline underline-offset-2 decoration-white" target="_blank" rel="noopener noreferrer">
+              P&A Grant Thornton
             </Link>
           </p>
-        </span> */}
+        </span>
       </div>        
       <h1 className="text-5xl sm:text-6xl font-semibold text-center leading-tight z-10 tracking-tight">
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 ">

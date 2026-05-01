@@ -11,6 +11,37 @@ export const informationsData:PanelProps<"timeline" | "list">[] = [
       color: "violet",
       type: "timeline",
       data: [
+                {
+          date: {
+            start: "Jul 2025",
+            end: "Apr 2026"
+          },
+          title: "Fullstack Developer",
+          organization: {
+            name: "AF Impacts LLC",
+            logo: null,
+            url: "https://swayed.io"
+          },
+          location: "Dallas Texas, United States - Remote",
+          responsibilities: [
+            "Developed and maintained full-stack web applications using Next.js.",
+            "Implemented background job processing and asynchronous workflows using FastAPI.",
+            "Built responsive and modern user interfaces using Tailwind CSS.",
+            "Implemented cloud-based data storage using AWS DynamoDB and S3.",
+            "Integrated Redis for caching and performance optimization.",
+            "Implemented secure authentication and user management using Clerk.",
+            "Integrated payment processing and subscription workflows using Stripe.",
+            "Implemented email delivery and notification systems using Resend.",
+            "Built workflows using Claude, Gemini 3, and GPT-5 via OpenRouter.",
+            "Implemented vector search and semantic retrieval using Pinecone.",
+            "Automated backend workflows and third-party integrations using n8n and RunningHub.",
+            "Integrated AI services and model deployments using Replicate AI and Hedra.",
+            "Implemented application security, rate limiting, and abuse prevention using Arcjet.",
+            "Deployed and managed applications using Coolify, VHSCloud, Railway, and Render.",
+            "Managed cloud infrastructure and services using Alibaba Cloud Service.",
+            "Utilized Antigravity and Claude Code as the primary code editor for development."
+          ]
+        },
         {
           date: {
             start: "Feb 2025",
