@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+  import { useEffect, useRef, useState } from "react";
 import { activeTabAtom, prevTabAtom } from "@stores/atom";
 import { useAtom, useSetAtom } from "jotai";
 import { informationsData } from "@data/informations";

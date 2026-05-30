@@ -20,7 +20,7 @@ const glows = [
 const Hero = () => {
 
   const [isCopied, setIsCopied] = useState(false);
-  const email = process.env.NEXT_PUBLIC_EMAIL || ""
+  const email = process.env.NEXT_PUBLIC_EMAIL || "karlledstephen@gmail.com"
   const linkedIn = process.env.NEXT_PUBLIC_LINKEDIN || ""
   const cv = process.env.NEXT_PUBLIC_CV || ""
 

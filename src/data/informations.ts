@@ -20,7 +20,7 @@ export const informationsData:PanelProps<"timeline" | "list">[] = [
           organization: {
             name: "AF Impacts LLC",
             logo: null,
-            url: "https://swayed.io"
+            url: null
           },
           location: "Dallas Texas, United States - Remote",
           responsibilities: [

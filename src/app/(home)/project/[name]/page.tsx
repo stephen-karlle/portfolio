@@ -3,63 +3,86 @@
 import { technologyColors } from "@constants/colors";
 import { projectsData } from "@data/projects";
 import { useParams } from "next/navigation";
-import { ShareIcon } from "@icons";
+import { ShareIcon, ArrowIcon } from "@icons";
 import Button from "@components/ui/button";
-import Carousel from "@components/ui/carousel";
-
-
+import Link from "next/link";
+import FeatureIcon from "@modules/projects/feature-icon";
+import ProjectGallery from "@modules/projects/project-gallery";
 
 export default function ProjectPage() {
-  const params = useParams() 
+  const params = useParams();
 
-  const project = projectsData.find(
-    (project) => {
-      const paramName = Array.isArray(params?.name) ? params?.name[0] : params?.name;
-      return project.name.toLowerCase().replace(/\s+/g, "-") === paramName?.toLowerCase().replace(/\s+/g, "-");
-    }
-  );
+  const project = projectsData.find((project) => {
+    const paramName = Array.isArray(params?.name) ? params?.name[0] : params?.name;
+    return project.name.toLowerCase().replace(/\s+/g, "-") === paramName?.toLowerCase().replace(/\s+/g, "-");
+  });
 
   return (
     <article className="flex flex-col items-center justify-center w-full z-10">
       {project ? (
-        <section className="w-full flex flex-col justify-center items-start pt-20 pb-20 max-w-4xl">
-          <div className="w-full flex items-center justify-between">
-            <div className="flex flex-col gap-1">
-              <h1 className="text-2xl bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-start leading-tight tracking-tight">
-                {project.name}
-              </h1>
-              <div className="flex items-center justify-start">    
-                <span className={`w-2 h-2 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full mr-2 flex items-center justify-center relative`}>
-                  <span className={`w-2 h-2 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full animate-ping flex-shrink-0 absolute`} />
+        <section className="w-full flex flex-col justify-center items-start pt-20 pb-32 max-w-3xl gap-10">
+
+          <Link
+            href="/#projects"
+            className="flex items-center gap-1.5 text-zinc-600 hover:text-zinc-400 transition-colors text-xs group"
+          >
+            <ArrowIcon className="w-3 h-3 stroke-2 stroke-current rotate-180 group-hover:-translate-x-0.5 transition-transform" />
+            All projects
+          </Link>
+
+          <div className="w-full flex items-start justify-between gap-6 flex-wrap">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <span className={`w-1.5 h-1.5 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full relative flex-shrink-0`}>
+                  <span className={`w-1.5 h-1.5 ${project.isDeployed ? "bg-green-500" : "bg-amber-500"} rounded-full animate-ping absolute`} />
                 </span>
-                <p className={`${project.isDeployed ? "text-green-500" : "text-amber-500"} text-xs font-medium`}>
+                <p className={`${project.isDeployed ? "text-green-500" : "text-amber-500"} text-[11px]`}>
                   {project.isDeployed ? "Deployed" : "Prototype"}
                 </p>
-                <span className="w-2 h-[1px] bg-gray-400 rounded-full mx-2 flex items-center justify-center relative" />
-                <p className="text-gray-400 text-xs">
-                  {project.createdAt}
-                </p>
+                <span className="w-3 h-px bg-zinc-800" />
+                <p className="text-zinc-700 text-[11px]">{project.createdAt}</p>
               </div>
+              <h1 className="text-3xl sm:text-[32px] font-semibold tracking-[-0.025em] leading-tight text-zinc-100">
+                {project.name}
+              </h1>
+              {project.description && (
+                <p className="text-zinc-500 text-sm leading-7 max-w-lg mt-1">
+                  {project.description}
+                </p>
+              )}
             </div>
-            {project.isDeployed && (
-              <Button 
-                variant="secondary"
-                onClick={() => project.link && window.open(project.link, "_blank")}
-              >
+
+            {project.isDeployed && project.link && (
+              <Button beam onClick={() => window.open(project.link, "_blank")}>
                 Live Preview
-                <ShareIcon className="w-4 h-4 stroke-2 stroke-white" />
+                <ShareIcon className="w-3.5 h-3.5 stroke-2 stroke-white" />
               </Button>
             )}
           </div>
-          <div className="flex flex-col w-full gap-2 mt-6">
-            <label className="text-gray-400 text-sm">
-              Technologies
-            </label>
-            <div className="flex items-start justify-start flex-wrap gap-2 ">
+
+          <ProjectGallery images={project.images} />
+
+          <div className="grid grid-cols-4 w-full border-y border-zinc-900 py-5">
+            {[
+              { label: "Type", value: project.type ?? "Personal Project" },
+              { label: "Role", value: project.role ?? "Full-Stack Developer" },
+              { label: "Year", value: project.createdAt ?? "—" },
+              { label: "Status", value: project.isDeployed ? "Live" : "Prototype" },
+            ].map(({ label, value }) => (
+              <div key={label} className="flex flex-col gap-1.5">
+                <p className="text-[9px] uppercase tracking-[0.12em] text-zinc-700">{label}</p>
+                <p className="text-sm text-zinc-400 font-medium">{value}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-3 w-full">
+            <p className="text-[9px] uppercase tracking-[0.12em] text-zinc-700">Stack</p>
+            <div className="flex items-start flex-wrap gap-1.5">
               {project.technologies.map((technology, index) => (
-                <span 
-                  key={index} 
-                  className={`px-2 py-1 rounded-lg  text-xs font-medium ${technologyColors[technology]}`}
+                <span
+                  key={index}
+                  className={`px-2.5 py-1 rounded-md text-[11px] font-medium ${technologyColors[technology]}`}
                 >
                   {technology}
                 </span>
@@ -67,27 +90,29 @@ export default function ProjectPage() {
             </div>
           </div>
 
-          <div className="w-full h-fit mt-8 overflow-hidden">
-            <Carousel images={project.images} />
-          </div>
-          <div className="flex flex-col items-start justify-center  w-full gap-1 mt-12">
+          {project.features && project.features.length > 0 && (
+            <div className="flex flex-col gap-3 w-full">
+              <p className="text-[9px] uppercase tracking-[0.12em] text-zinc-700">Key Features</p>
+              <div className="flex flex-col rounded-xl bg-secondary border border-zinc-900 overflow-hidden">
+                {project.features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 px-4 py-3"
+                  >
+                    <div className="w-6 h-6 rounded-md bg-violet-500/10 border border-violet-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <FeatureIcon feature={feature} />
+                    </div>
+                    <p className="text-zinc-500 text-[12.5px] leading-[1.65]">{feature}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
-            <h1 className="text-gray-100 text-xl font-medium">
-              Key Features
-            </h1>
-            <ul className="flex flex-col gap-2 w-full list-outside list-disc pl-4 mt-4 ">
-              {project.features && project.features.map((feature, index) => (
-                <li key={index} className="text-gray-400 text-base">
-                  {feature}
-                </li>
-              ))}
-            </ul>
-
-          </div>
         </section>
       ) : (
         <div className="w-full flex items-center justify-center min-h-[40rem]">
-          <p className="text-gray-400 text-lg">Project not found</p>
+          <p className="text-zinc-600 text-xs">Project not found.</p>
         </div>
       )}
     </article>

@@ -1,115 +1,116 @@
-import { LOGO } from '@constants/images';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+
+import { LOGO } from "@constants/images";
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
+  const behance = process.env.NEXT_PUBLIC_BEHANCE!;
+  const github = process.env.NEXT_PUBLIC_GITHUB!;
+  const linkedin = process.env.NEXT_PUBLIC_LINKEDIN!;
 
-  const behance = process.env.NEXT_PUBLIC_BEHANCE!
-  const github = process.env.NEXT_PUBLIC_GITHUB!
-  const linkedin = process.env.NEXT_PUBLIC_LINKEDIN!
-  
-  const handleNavigate = (id: string | number) => {
-    if (typeof id === "number") {
+  const handleNavigate = (id: string) => {
+    if (id === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      window.history.replaceState(null, "", "/");
+      return;
+    }
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
       window.history.replaceState(null, "", `#${id}`);
     }
   };
 
-  const handleRedirect = (name: string) => {
-    switch (name) {
-      case "behance":
-        window.open(behance, "_blank");
-        break;
-      case "github":
-        window.open(github, "_blank");
-        break;
-      case "linkedin":
-        window.open(linkedin, "_blank");
-        break;
-    }
-  }
+  const socials: { label: string; url: string }[] = [
+    { label: "Behance", url: behance },
+    { label: "GitHub", url: github },
+    { label: "LinkedIn", url: linkedin },
+    { label: "Indeed", url: "#" },
+  ];
 
+  const navLinks = ["home", "skills", "projects", "contact"];
 
   return (
-    <footer className=" flex-shrink-0 w-full flex items-start justify-center z-10 border-t border-gray-900">
+    <footer className="flex-shrink-0 w-full flex items-start justify-center z-10 border-t border-white/[0.06]">
+      <section className="flex flex-col gap-10 p-8 py-12 max-w-4xl w-full">
 
-      <section className="flex flex-col sm:flex-row items-center justify-between gap-12 p-8 py-12 max-w-4xl w-full h-full">
-        <div className="flex flex-col items-start w-fit justify-between gap-2 h-full">
-          <div className="flex flex-col gap-2 items-start justify-start">
-            <div className="flex items-center justify-center gap-2">
-              <Link 
-                className="text-white text-lg font-medium text-center flex-shrink-0 "
-                href="/"
-              >
+        {/* Top */}
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-10">
+
+          {/* Brand */}
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <Link href="/" prefetch={false}>
                 <Image src={LOGO} alt="Karlle" width={20} height={20} />
-              </Link> 
-              <h1 className="text-lg bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 font-semibold text-start leading-tight z-10 tracking-tight">
+              </Link>
+              <span className="text-sm font-medium text-gray-200 tracking-tight">
                 Stephen Karlle
-              </h1>
+              </span>
             </div>
-            <p className="text-gray-400 text-center sm:text-start text-sm tracking-tight cursor-pointer break-keep ">
-              San Fernando, Pampanga<br/>
+            <p className="text-xs text-gray-600 font-mono leading-relaxed">
+              San Fernando, Pampanga<br />
               Philippines
             </p>
-          </div>
-
-          <div className="hidden sm:flex items-end ">
-            <div className="flex items-center justify-stendrt w-fit">
-              <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 flex items-center justify-center relative">
-                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-ping flex-shrink-0 absolute" />
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-[6px] w-[6px]">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-[6px] w-[6px] bg-emerald-500" />
               </span>
-              <p className="text-gray-100 text-sm tracking-tight cursor-pointer ">
-                All Projects Operational
-              </p>
+              <span className="text-xs text-gray-600 font-mono tracking-wide">
+                All systems operational
+              </span>
             </div>
           </div>
-          
-        </div>
-        
-        <div className="flex items-start justify-center gap-8 w-auto">
-          <div className="flex flex-col items-center w-fit justify-start gap-4 h-full">
-            <p className="text-gray-400 text-xs uppercase tracking-tight cursor-pointer break-keep mb-2 w-20">
-              Socials
-            </p>
-            {["Behance", "GitHub", "LinkedIn", "Indeed"].map((item, index) => {
-              return(
+
+          {/* Links */}
+          <div className="flex gap-12">
+            <div className="flex flex-col gap-3">
+              <p className="text-[10px] uppercase tracking-widest text-gray-600 font-mono mb-1">
+                Socials
+              </p>
+              {socials.map(({ label, url }) => (
+                <a
+                  key={label}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 hover:text-gray-200 transition-colors duration-150 w-fit"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3">
+              <p className="text-[10px] uppercase tracking-widest text-gray-600 font-mono mb-1">
+                General
+              </p>
+              {navLinks.map((item) => (
                 <button
-                  key={index}
-                  className="text-gray-200 font-normal text-sm tracking-tight cursor-pointer capitalize w-20 text-start hover:underline"
-                  onClick={() => handleRedirect(item.toLocaleLowerCase())}
+                  key={item}
+                  onClick={() => handleNavigate(item)}
+                  className="text-sm text-gray-500 hover:text-gray-200 transition-colors duration-150 capitalize text-start w-fit"
                 >
                   {item}
                 </button>
-              )
-            })}
-          </div>
-          <div className="flex flex-col items-start w-full justify-start gap-4 h-full">
-            <p className="text-gray-400 text-xs uppercase tracking-tight cursor-pointer break-keep mb-2 w-20">
-              General
-            </p>
-            {["Home", "Skills", "Projects", "Contact"].map((item, index) => {
-              return(
-                <button
-                  key={index}
-                  className="text-gray-200 font-normal text-sm tracking-tight cursor-pointer capitalize w-20 text-start hover:underline"
-                  onClick={() => handleNavigate(item.toLocaleLowerCase())}
-                >
-                  {item}
-                </button>
-              )
-            })}
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Bottom */}
+        <div className="flex items-center justify-between border-t border-white/[0.04] pt-6 flex-wrap gap-3">
+          <p className="text-[11px] text-gray-700 font-mono tracking-wide">
+            © 2025 <span className="text-gray-600">Stephen Karlle</span>. All rights reserved.
+          </p>
+          <p className="text-[11px] text-gray-700 font-mono tracking-wide">
+            Built with Next.js & Tailwind
+          </p>
+        </div>
+
       </section>
-
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
- 
+export default Footer;

@@ -1,7 +1,38 @@
-
 export const projectsData = [
   {
+    name: "Swayed",
+    type: "Freelance",
+    role: "Full-Stack Developer",
+    images: [
+      "https://res.cloudinary.com/dy5j494og/image/upload/v1780128250/swayed/Screenshot_2026-05-30_at_4.04.04_PM_uiahvk.png",
+      "https://res.cloudinary.com/dy5j494og/image/upload/v1780128067/swayed/Screenshot_2026-05-30_at_4.00.57_PM_d31lrc.png",
+      "https://res.cloudinary.com/dy5j494og/image/upload/v1780127743/swayed/Screenshot_2026-05-30_at_3.55.38_PM_oaczz5.png",
+      "https://res.cloudinary.com/dy5j494og/image/upload/v1780127466/swayed/Screenshot_2026-05-30_at_3.50.58_PM_ypbw77.png",
+    ],
+    link: "https://www.swayed.io",
+    technologies: ["Next.js 15", "React 19", "TypeScript", "Jotai", "React Flow", "TanStack Query", "TailwindCSS 4", "Framer Motion", "LangChain", "OpenAI", "Claude", "Gemini", "FastAPI", "Celery", "Redis", "AWS DynamoDB", "AWS S3", "Stripe", "Clerk", "Zod", "Bun", "Docker"],
+    tags: ["AI Platform", "Node-Based Canvas", "Microservices"],
+    features: [
+      "180,000+ lines of code across 6 microservices (Next.js frontend, FastAPI backend, deep-swap, swaply, VideoAsyncAPI, jetstream).",
+      "Node-based visual canvas engine (Mindflow) built on React Flow with 326 React components and 363 files powering drag-and-drop AI workflows.",
+      "126+ API endpoints (107 Next.js API routes + 19 FastAPI endpoints) handling AI generation, credit management, and real-time job orchestration.",
+      "12+ AI-powered tools: Swaply (face swap), Restage (background replacement), Sharply (upscaling), InfiniteClips (long-to-short), Idealy (trend extraction), UGC ad generation, Mirrorly, TryOn, MotionTransfer, and more.",
+      "Multi-model AI chat integration with GPT, Claude, and Gemini via OpenRouter with LangChain orchestration and streaming responses.",
+      "20+ DynamoDB tables with a 3-layer credit deduction architecture: per-request charging, correct-on-read sweeps, and cron safety net — with idempotency guarantees.",
+      "14 Jotai atomic state stores managing canvas state, node connections, and real-time UI synchronization across the Mindflow editor.",
+      "Stripe-powered credit system with tiered consumption (topup → rollover → core), promo codes, and dynamic per-app pricing with 70% margin calculations.",
+      "Celery + Redis task queue for async job processing with polling, webhook-based status tracking, and multi-service coordination across RunningHub and custom backends.",
+      "Instagram and TikTok content scraping pipeline (Idealy) with platform-aware pricing and partial status handling for large batch operations.",
+    ],
+    description: "A web app AI-powered content creation platform with a node-based canvas where users connect 12+ AI tools into visual workflows — from face swaps and video enhancement to trend analysis and UGC ad generation — backed by a microservices architecture processing async AI jobs across multiple providers.",
+    isFeatured: true,
+    isDeployed: true,
+    createdAt: "Jul 16th 2025",
+  },
+  {
     name: "CloudSmiles",
+    type: "Freelance",
+    role: "Full-Stack Developer",
     images: [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738159765/cloudsmiles/prdl0baifxpiidvtm53e.webp",
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738159765/cloudsmiles/axgxymbhm87mwn2m6ysg.webp",
@@ -36,6 +67,8 @@ export const projectsData = [
   },
   {
     name: "SkillSwap",
+    type: "Personal Project",
+    role: "Full-Stack Developer",
     images: [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738151870/skillswap/nkb8u06fupesktnaf5hi.webp",
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738151870/skillswap/ezvabbdmmrpaybc16aiv.webp",
@@ -46,7 +79,7 @@ export const projectsData = [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738151871/skillswap/jpjct277ma0wrxxwwljr.webp",
     ],
     link: "https://skillswap-nu.vercel.app/",
-    technologies: ["React", "NodeJS", "MongoDB", "JavaScript","Vite", "TailwindCSS", "Render", "Google Maps", "Socket"],
+    technologies: ["React", "NodeJS", "MongoDB", "JavaScript", "Vite", "TailwindCSS", "Render", "Google Maps", "Socket"],
     tags: ["Social Media", "Messaging", "Generative Text"],
     features: [
       "Profile management system for users to maintain their skill and experience details.",
@@ -60,10 +93,12 @@ export const projectsData = [
     description: "A social media platform that allows users to swap their skills with other users. Users can post their skills and message other users for skill exchange.",
     isFeatured: true,
     isDeployed: true,
-    createdAt: "Sep 16th 2023"
+    createdAt: "Sep 16th 2023",
   },
   {
     name: "DocuTrace",
+    type: "Personal Project",
+    role: "Full-Stack Developer",
     images: [
       "https://res.cloudinary.com/dueebthen/image/upload/v1738057014/works/ovwzw7elxx20o3xvyvha.png",
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738146549/docutrace/zcclvbxqe4lpnrweepqc.webp",
@@ -72,8 +107,7 @@ export const projectsData = [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738146550/docutrace/nnyiua0rrc3bfrz9jtel.webp",
     ],
     link: "https://www.docutrace.website",
-    year: "2024",
-    technologies: ["React", "NodeJS", "TypeScript", "MongoDB","Vite", "Redis", "Vercel"],
+    technologies: ["React", "NodeJS", "TypeScript", "MongoDB", "Vite", "Redis", "Vercel"],
     tags: ["Progress Tracker", "Activity Logger"],
     features: [
       "Log activities related to document handling for audit and transparency.",
@@ -85,10 +119,12 @@ export const projectsData = [
     description: "A cloud-based system that allows employees to track their documents, request for documents, and receive notifications for document updates.",
     isFeatured: false,
     isDeployed: true,
-    createdAt: "Dec 3rd 2024"
+    createdAt: "Dec 3rd 2024",
   },
   {
     name: "Pampanga Tourista",
+    type: "Commissioned Project",
+    role: "Full-Stack Developer",
     images: [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738145129/pampangatourista/ev0jqsnvpuhjq9tmga8m.webp",
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738145132/pampangatourista/zlgfyrvpanhkzg0trjxu.webp",
@@ -97,7 +133,7 @@ export const projectsData = [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738145130/pampangatourista/omqdv1x5d4uxooa1rbtz.webp",
     ],
     link: "https://www.pampangatourista.com",
-    technologies: ["React", "NodeJS", "MongoDB", "TypeScript","Vite", "TailwindCSS", "Render", "Google Maps"],
+    technologies: ["React", "NodeJS", "MongoDB", "TypeScript", "Vite", "TailwindCSS", "Render", "Google Maps"],
     tags: ["Booking", "Ratings"],
     features: [
       "Autocompute fares and distances for convenient travel planning.",
@@ -114,6 +150,8 @@ export const projectsData = [
   },
   {
     name: "CerTrack",
+    type: "Personal Project",
+    role: "Full-Stack Developer",
     images: [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738144047/certrack/ley5bues8m3zwdozg8bm.webp",
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738143901/certrack/esoyu1rquwutzeje3kto.webp",
@@ -122,7 +160,7 @@ export const projectsData = [
       "https://res.cloudinary.com/dy5j494og/image/upload/v1738143900/certrack/iipalhzke52itlfz5qjw.webp",
     ],
     link: "https://www.doh-service.online/login",
-    technologies: ["React", "NodeJS", "MongoDB", "JavaScript","Vite", "TailwindCSS", "Render"],
+    technologies: ["React", "NodeJS", "MongoDB", "JavaScript", "Vite", "TailwindCSS", "Render"],
     tags: ["Training Tracker", "Certificate Editor"],
     features: [
       "Trainee profile management for tracking individual achievements.",
@@ -134,6 +172,6 @@ export const projectsData = [
     description: "A web-based system that allows users to track their certificates, request for certificates, and receive notifications for training updates.",
     isFeatured: false,
     isDeployed: true,
-    createdAt: "Sep 1st 2024"
+    createdAt: "Sep 1st 2024",
   },
 ]

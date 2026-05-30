@@ -32,6 +32,7 @@ export const FileArrowIcon = (props: IconProps) => <Icon name="FileArrow" {...pr
 export const FileCheckIcon = (props: IconProps) => <Icon name="FileCheck" {...props} />;
 export const FilePlusIcon = (props: IconProps) => <Icon name="FilePlus" {...props} />;
 export const FolderIcon = (props: IconProps) => <Icon name="Folder" {...props} />;
+export const GitBranchIcon = (props: IconProps) => <Icon name="Folder" {...props} />;
 export const GridIcon = (props: IconProps) => <Icon name="Grid" {...props} />;
 export const ImageIcon = (props: IconProps) => <Icon name="Image" {...props} />;
 export const InboxIcon = (props: IconProps) => <Icon name="Inbox" {...props} />;
