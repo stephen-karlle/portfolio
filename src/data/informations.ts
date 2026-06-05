@@ -11,35 +11,88 @@ export const informationsData:PanelProps<"timeline" | "list">[] = [
       color: "violet",
       type: "timeline",
       data: [
-                {
+        {
+          date: {
+            start: "Apr 2026",
+            end: "Present"
+          },
+          title: "Frontend Developer",
+          organization: {
+            name: "P&A Grant Thornton",
+            logo: "/images/gt.png",
+            url: "https://www.grantthornton.com.ph/"
+          },
+          location: "Makati, National Capital Region, Philippines · Hybrid",
+          responsibilities: [
+            "Built dynamic and responsive user interfaces using React.js and component-driven architecture.",
+            "Developed full pages and routing using Next.js, leveraging SSR and SSG for optimized performance.",
+            "Wrote type-safe, scalable frontend code using TypeScript, reducing runtime errors across the codebase.",
+            "Styled and themed application layouts using Tailwind CSS, ensuring consistent and responsive design.",
+            "Integrated and consumed RESTful APIs documented via Swagger, streamlining frontend-backend communication.",
+            "Developed and maintained server-side rendered views using .NET Razor, bridging frontend and backend presentation layers.",
+            "Built and consumed backend services using .NET Core, contributing to full-stack feature development.",
+            "Managed source control, sprint planning, and work item tracking using Azure DevOps.",
+            "Configured and maintained CI/CD pipelines on Azure DevOps, automating build and deployment workflows.",
+            "Successfully deployed a production feature end-to-end via Azure DevOps, coordinating pipeline execution and release management.",
+            "Revamped an entire project from the ground up, improving maintainability and scalability.",
+            "Redesigned the overall UI/UX, delivering a modern look and feel aligned with company branding standards.",
+            "Diagnosed and resolved a critical race condition, ensuring reliable data rendering and preventing unpredictable UI behavior.",
+          ]
+        },
+        {
           date: {
             start: "Jul 2025",
             end: "Apr 2026"
           },
-          title: "Fullstack Developer",
+          title: "Full Stack Developer",
           organization: {
             name: "AF Impacts LLC",
             logo: null,
-            url: null
+            url: "https://www.swayed.io"
           },
-          location: "Dallas Texas, United States - Remote",
+          location: "Dallas, Texas, United States · Remote",
           responsibilities: [
-            "Developed and maintained full-stack web applications using Next.js.",
-            "Implemented background job processing and asynchronous workflows using FastAPI.",
-            "Built responsive and modern user interfaces using Tailwind CSS.",
-            "Implemented cloud-based data storage using AWS DynamoDB and S3.",
-            "Integrated Redis for caching and performance optimization.",
-            "Implemented secure authentication and user management using Clerk.",
-            "Integrated payment processing and subscription workflows using Stripe.",
-            "Implemented email delivery and notification systems using Resend.",
-            "Built workflows using Claude, Gemini 3, and GPT-5 via OpenRouter.",
-            "Implemented vector search and semantic retrieval using Pinecone.",
-            "Automated backend workflows and third-party integrations using n8n and RunningHub.",
-            "Integrated AI services and model deployments using Replicate AI and Hedra.",
-            "Implemented application security, rate limiting, and abuse prevention using Arcjet.",
-            "Deployed and managed applications using Coolify, VHSCloud, Railway, and Render.",
-            "Managed cloud infrastructure and services using Alibaba Cloud Service.",
-            "Utilized Antigravity and Claude Code as the primary code editor for development."
+            "Built and maintained the entire Next.js frontend, serving as the main client-facing layer of the Swayed.io UGC and productivity SaaS platform.",
+            "Developed social media scrapers using FastAPI to gather and process videos from Facebook, Instagram, TikTok, YouTube, LinkedIn, and Twitter.",
+            "Implemented background job processing using FastAPI workers with Redis for storing and tracking job IDs across asynchronous workflows.",
+            "Managed cloud-based data storage using AWS DynamoDB as the primary database and S3 as the CDN for storing images, files, and system-generated documents.",
+            "Implemented secure authentication and user management using Clerk, handling sign-up, login, and user sessions.",
+            "Integrated Stripe as the payment gateway, enabling subscription and billing workflows for SaaS users.",
+            "Built and delivered branded transactional emails using Resend combined with React Email for polished user communications.",
+            "Built an AI-powered chatbot using Claude, Gemini 3, and GPT-5 via OpenRouter, enabling intelligent conversational experiences within the platform.",
+            "Implemented vector search and semantic memory using Pinecone to store and retrieve user conversation context for the chatbot.",
+            "Built a drag-and-drop node-based interface using React Flow, allowing users to connect file sources, links, and other nodes directly to the chatbot node as context inputs.",
+            "Automated UGC video generation workflows using n8n, orchestrating multi-step pipelines for content creation.",
+            "Leveraged RunningHub to generate UGC mirror shots, B-rolls, product reviews, face swaps, clothing swaps, motion transfers, storyboards, and HD upscaling for images and videos.",
+            "Integrated Replicate AI and Hedra to generate AI videos from user-provided images and scripts.",
+            "Implemented application security, rate limiting, and abuse prevention across API endpoints using Arcjet.",
+            "Deployed and managed the FastAPI backend on Coolify hosted on VHSCloud for high-performance server requirements, with the Next.js frontend on Railway and Render as a failover backup.",
+            "Integrated Alibaba Cloud's Wan model API to convert static images into realistic AI-generated videos.",
+          ]
+        },
+        {
+          date: {
+            start: "May 2025",
+            end: "Jul 2025"
+          },
+          title: "Web Developer",
+          organization: {
+            name: "La Rose Noire",
+            logo: "/images/larose.jpg",
+            url: "https://la-rose-noire.com"
+          },
+          location: "Clark Freeport and Special Economic Zone, Central Luzon, Philippines · On-site",
+          responsibilities: [
+            "Built a full-stack QR Code Event System enabling users to track attendance, manage events, and claim prizes seamlessly.",
+            "Developed a Google Drive-inspired file management tool for uploading, organizing, and managing forms internally.",
+            "Created a PDF Comparison Tool to streamline the QA process, allowing teams to efficiently compare two documents side by side.",
+            "Designed and built RESTful APIs using Flask, powering backend logic for internal web applications.",
+            "Developed lightweight and performant backend services using Hono.js for fast API routing and middleware handling.",
+            "Built responsive and modern user interfaces using React.js and Tailwind CSS.",
+            "Automated and manipulated PDF, Excel, and Word files using Python, reducing manual document processing effort.",
+            "Designed and managed relational databases using Microsoft SQL Server, ensuring data integrity across systems.",
+            "Mapped and managed database entities using TypeORM, streamlining object-relational interactions.",
+            "Deployed and managed web applications on IIS (Internet Information Services), handling production releases and server configurations.",
           ]
         },
         {
@@ -53,36 +106,36 @@ export const informationsData:PanelProps<"timeline" | "list">[] = [
             logo: "/images/hooli.jpg",
             url: "https://hoolisoftware.com"
           },
-          location: "Marilao, Bulacan - Remote",
+          location: "Marilao, Bulacan, Philippines · Remote",
           responsibilities: [
-            "Collaborated with the team using Jira to manage tasks and track progress.",
-            "Used Bitbucket for version control and contributed to the main branch.",
-            "Developed mobile apps using Android Studio emulators for testing.",
-            "Wrote robust, maintainable code with TypeScript for type safety.",
-            "Translated Figma designs into functional interfaces using React Native.",
-            "Integrated Expo to streamline the mobile development workflow.",
-            "Handled and validated forms using React Hook Form.",
-            "Performed HTTP requests with Axios to enable seamless API integration.",
-            "Applied Zod for schema-based validation of forms and API data.",
-            "Managed global app state effectively using Jotai.",
-            "Implemented file-based routing with Expo Router for intuitive navigation.",
-            "Managed dependencies with npm and yarn in a Node.js environment.",
+            "Collaborated with the team and managed tasks using Jira to track progress.",
+            "Utilized Bitbucket for version control and contributed changes to the main branch.",
+            "Created emulators with Android Studio for mobile application development.",
+            "Leveraged TypeScript for type safety, ensuring robust and maintainable code.",
+            "Transformed Figma designs into fully functional mobile interfaces using React Native.",
+            "Integrated Expo into the development process to streamline building applications.",
+            "Implemented form handling and validation using React Hook Form for user input.",
+            "Utilized Axios for making HTTP requests, enabling seamless communication with APIs.",
+            "Ensured data consistency and validation using Zod for schema-based form and API validation.",
+            "Managed application state efficiently with Jotai, simplifying global state logic.",
+            "Set up file-based routing in mobile apps using Expo Router to streamline navigation.",
+            "Utilized Node.js for package management with npm and yarn.",
           ]
         },
         {
           date: {
             start: "Jan 2024",
-            end: "Feb 2025"
+            end: "Jan 2025"
           },
-          title: "Fullstack Web Developer",
+          title: "Full Stack Developer",
           organization: {
-            name: "Self-Employed",
+            name: "Krale Labs",
             logo: null,
             url: null
           },
-          location: "Remote",
+          location: "Pampanga, Philippines · Freelance",
           responsibilities: [
-            "Built reusable components using React to ensure consistent UI across applications.",
+            "Built reusable components using React to consistent UI across applications.",
             "Developed a machine learning chatbot using Cohere LLM with RAG.",
             "Implemented a real-time messaging app with Socket.IO for websockets.",
             "Designed responsive UI/UX with TailwindCSS to enhance user experience.",
@@ -103,7 +156,7 @@ export const informationsData:PanelProps<"timeline" | "list">[] = [
             "Implemented Redux and Zustand for global state management.",
             "Secured APIs and user authentication using JSON Web Tokens.",
             "Integrated Cloudinary for image and file upload and delivery optimization.",
-            "Created wireframes and prototypes using Figma to design user interfaces."
+            "Created wireframes and prototypes using Figma to design user interfaces.",
           ]
         },
       ]
@@ -171,77 +224,4 @@ export const informationsData:PanelProps<"timeline" | "list">[] = [
       },
     ]
   },
-  // {
-  //   name: "Technologies",
-  //   title: "Favorite Tools",
-  //   description: "A collection of the tools and technologies I use in my software development journey. Each tool is part of my toolkit, enabling me to build efficient and effective solutions.",
-  //   icon: ContainerIcon,
-  //   color: "red",
-  //   type: "list",
-  //   data: [
-  //     {
-  //       header: "Programming Languages",
-  //       description: "The languages I use to bring my ideas to life. Each language has its own strengths and applications, and I enjoy exploring their unique features.",
-  //       items: [
-  //         "C++",
-  //         "JavaScript",
-  //         "TypeScript",
-  //         "PHP",
-  //         "Python",
-  //       ]
-  //     },
-  //     {
-  //       header: "Frameworks and Libraries",
-  //       description: "The frameworks and libraries that help me build applications efficiently. Each one has its own strengths, and I enjoy leveraging them to create powerful solutions.",
-  //       items: [
-  //         "React",
-  //         "Next.js",
-  //         // "React Native",
-  //         // "Express.js",
-  //         // "Hono.js",
-  //         "Tailwind",
-  //         // "Framer Motion",
-  //         // "Expo",
-  //       ]
-  //     },
-  //     {
-  //       header: "Tools and Platforms",
-  //       description: "The tools and platforms I use to streamline my development process. Each one plays a crucial role in my workflow, helping me stay organized and productive.",
-  //       items: [
-  //         // "GitHub",
-  //         // "Vercel",
-  //         "Render",
-  //         // "Postman",
-  //         // "Docker",
-  //         "Redis",
-  //         "MongoDB",
-  //       ]
-  //     },
-  //     {
-  //       header: "Softwares",
-  //       description: "The software I rely on to enhance my development experience. Each one adds value to my workflow, making it easier to create and manage applications.",
-  //       items: [
-  //         // "Adobe Photoshop",
-  //         // "Adobe Illustrator",
-  //         // "Adobe After Effects",
-  //         // "Adobe Premiere Pro",
-  //         // "Microsoft Word",
-  //         // "Microsoft Excel",
-  //         // "Microsoft Powerpoint",
-  //         // "Blender 3D",
-  //         "Figma",
-  //       ]
-  //     }
-  //   ],
-  // },
-  // {
-  //   name: "Interests",
-  //   title: "Beyond Work",
-  //   description: "Sometimes I like to take a break from coding and explore other interests. These pursuits help me recharge and bring fresh perspectives to my work.",
-  //   icon: SparklesIcon,
-  //   color: "amber",
-  //   type: "list",
-  //   data: [],
-  // },
-
 ]
