@@ -59,16 +59,21 @@ const Timeline = ({date, title, organization, location, responsibilities}: Timel
               const isLast = index === arr.length - 1
               const hasShrunk = isLast && !expanded && responsibilities.length > 5
               return (
-                <li key={index} className="text-gray-500 text-sm md:text-base before:absolute before:left-0 before:content-['♦'] before:text-gray-500">
-                  {hasShrunk ? responsibility.slice(0, 25) : responsibility}
-                  {hasShrunk && (
-                    <button
-                      onClick={() => setExpanded(!expanded)}
-                      className="text-gray-200 text-sm md:text-base font-medium hover:underline underline-offset-2 ml-2"
-                    > 
-                      {expanded ? "...See Less" : "...See More"}
-                    </button>
-                  )}
+                <li key={index} className="text-gray-500 text-sm md:text-base flex gap-2">
+                  <span className="shrink-0 text-gray-700 font-mono text-xs pt-[3px] w-4 text-right">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>
+                    {hasShrunk ? responsibility.slice(0, 25) : responsibility}
+                    {hasShrunk && (
+                      <button
+                        onClick={() => setExpanded(!expanded)}
+                        className="text-gray-200 text-sm md:text-base font-medium hover:underline underline-offset-2 ml-2"
+                      >
+                        {expanded ? "...See Less" : "...See More"}
+                      </button>
+                    )}
+                  </span>
                 </li>
               )
             })}

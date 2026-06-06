@@ -8,6 +8,8 @@ import { useAtomValue } from "jotai";
 import { lightboxOpenAtom } from "@atoms/lightbox";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./ui/button";
+import { Phone } from "@untitled-ui/icons-react";
 
 type NavbarProps = {
   scrollRef: RefObject<HTMLElement | null>;
@@ -61,13 +63,12 @@ const Navbar = ({ scrollRef }: NavbarProps) => {
         ))}
 
         <div className="w-px h-3.5 bg-white/10 mx-1" />
-
-        <button
+        <Button 
+          variant="primary"
           onClick={() => handleNavigate("contact")}
-          className="text-sm text-gray-400 hover:text-gray-200 px-3 py-1.5 rounded-lg border border-white/[0.08] hover:border-white/[0.14] hover:bg-white/5 transition-all duration-150 tracking-wide"
         >
-          contact
-        </button>
+          Contact
+        </Button>
       </div>
     </nav>
   );

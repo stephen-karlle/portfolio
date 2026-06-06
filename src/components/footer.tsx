@@ -48,7 +48,7 @@ const Footer = () => {
                 Stephen Karlle
               </span>
             </div>
-            <p className="text-xs text-gray-600 font-mono leading-relaxed">
+            <p className="text-xs text-gray-600 leading-relaxed">
               San Fernando, Pampanga<br />
               Philippines
             </p>
@@ -57,7 +57,7 @@ const Footer = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
                 <span className="relative inline-flex rounded-full h-[6px] w-[6px] bg-emerald-500" />
               </span>
-              <span className="text-xs text-gray-600 font-mono tracking-wide">
+              <span className="text-xs text-gray-600 tracking-wide">
                 All systems operational
               </span>
             </div>
@@ -66,7 +66,7 @@ const Footer = () => {
           {/* Links */}
           <div className="flex gap-12">
             <div className="flex flex-col gap-3">
-              <p className="text-[10px] uppercase tracking-widest text-gray-600 font-mono mb-1">
+              <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-1">
                 Socials
               </p>
               {socials.map(({ label, url }) => (
@@ -100,10 +100,10 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="flex items-center justify-between border-t border-white/[0.04] pt-6 flex-wrap gap-3">
-          <p className="text-[11px] text-gray-700 font-mono tracking-wide">
+          <p className="text-[11px] text-gray-700 tracking-wide">
             © 2025 <span className="text-gray-600">Stephen Karlle</span>. All rights reserved.
           </p>
-          <p className="text-[11px] text-gray-700 font-mono tracking-wide">
+          <p className="text-[11px] text-gray-700 tracking-wide">
             Built with Next.js & Tailwind
           </p>
         </div>
