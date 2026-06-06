@@ -24,13 +24,10 @@ const Hero = () => {
   const linkedIn = process.env.NEXT_PUBLIC_LINKEDIN || ""
   const cv = process.env.NEXT_PUBLIC_CV || ""
 
-
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
     setIsCopied(true);
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2000);
+    setTimeout(() => setIsCopied(false), 2000);
   }
 
   const handleDownload = () => {
@@ -38,27 +35,28 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full flex flex-col justify-center items-center pt-20 relative z-20 ">
+    <section className="w-full flex flex-col justify-center items-center pt-16 sm:pt-20 relative z-20 px-4 sm:px-6">
       <div className="pointer-events-none flex absolute w-full h-full max-w-5xl items-center justify-center">
         <Glows glows={glows} />
       </div>
       
       <GridLines className="[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] h-[50rem] z-0 absolute -top-20" squares={squares} />
+      
       <div className="p-2 flex items-center justify-center bg-gradient-to-r from-gray-900 to-transparent rounded-full mb-4">
         <span className="relative inline-flex overflow-hidden rounded-full p-[1px]">
           <SpinningBorder />
-          <p className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-primary px-3 py-1 font-normal text-xs md:text-sm text-white ">
+          <p className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-primary px-3 py-1 font-normal text-xs md:text-sm text-white">
             <SparklesIcon className="w-4 h-4 fill-gray-200 inline mr-1" />
-      
-            Working at{" "}    
+            Working at{" "}
             <Link href="https://www.grantthornton.com.ph/" className="font-medium ml-1 hover:underline underline-offset-2 decoration-white" target="_blank" rel="noopener noreferrer">
               P&A Grant Thornton
             </Link>
           </p>
         </span>
-      </div>        
-      <h1 className="text-5xl sm:text-6xl font-semibold text-center leading-tight z-10 tracking-tight">
-        <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300 ">
+      </div>
+
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-center leading-tight z-10 tracking-tight">
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-100 to-gray-300">
           Stephen Karlle
         </span>
         <br />
@@ -68,17 +66,15 @@ const Hero = () => {
         />
       </h1>
 
-
-      <p className="text-gray-400 text-center text-base">
+      <p className="text-gray-400 text-center text-sm sm:text-base max-w-sm sm:max-w-none mt-2">
         a developer with a passion for utilizing modern technologies.
-        <span className="inline sm:block "> and developing solutions that make a difference.</span>
+        <span className="inline sm:block">and developing solutions that make a difference.</span>
       </p>
 
-
-      <div className="z-10 flex items-center justify-center gap-4 mt-6">
+      <div className="z-10 flex items-center justify-center gap-3 sm:gap-4 mt-6 w-full sm:w-auto">
         <Button onClick={handleDownload} beam>
           <DownloadIcon className="w-4 h-4 stroke-[2.5] stroke-white" />
-          Download CV
+          <span className="hidden xs:inline">Download</span> CV
         </Button>
         <Button 
           variant="secondary"
@@ -95,8 +91,11 @@ const Hero = () => {
           type="button"
           className="flex flex-row items-center justify-center gap-2 cursor-copy"
         >
-          {isCopied ? <CheckIcon className="w-4 h-4 stroke-[2.5] stroke-gray-400" /> : <CopyIcon className="w-4 h-4 stroke-[2.5] stroke-gray-400" />}
-          <p className="text-gray-400 text-sm tracking-wide font-mono">
+          {isCopied 
+            ? <CheckIcon className="w-4 h-4 stroke-[2.5] stroke-gray-400" /> 
+            : <CopyIcon className="w-4 h-4 stroke-[2.5] stroke-gray-400" />
+          }
+          <p className="text-gray-400 text-xs sm:text-sm tracking-wide font-mono truncate max-w-[200px] sm:max-w-none">
             {email}
           </p>
         </button>

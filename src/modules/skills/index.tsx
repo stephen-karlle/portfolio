@@ -1,7 +1,7 @@
-import { backendTechnologies, frontendTechnologies } from "@constants/list"
-import { OrbitingCircles } from "@components/animations/orbiting-circles"
+// import { backendTechnologies, frontendTechnologies } from "@constants/list"
+// import { OrbitingCircles } from "@components/animations/orbiting-circles"
 import Vignette from "@components/effects/vignette"
-import Image from "next/image"
+// import Image from "next/image"
 import Glows from "@components/effects/glows"
 import Compass from "./compass"
 
@@ -13,36 +13,36 @@ const glows = [
 const Skills = () => {
   
   return (
-      <section className="w-full flex flex-col justify-center items-center max-w-4xl z-10 -mt-20">
+    <section className="w-full flex flex-col justify-center items-center max-w-4xl z-10 -mt-20">
 
-        <div className="w-full h-80 overflow-clip relative mt-10 flex items-center justify-center ">
-          <Vignette top left right size="32" color=" from-primary to-transparent" className="z-20" />
-          <Glows glows={glows} />
+      <div className="w-full h-80 overflow-clip relative mt-10 flex items-center justify-center ">
+        <Vignette top left right size="32" color=" from-primary to-transparent" className="z-20" />
+        <Glows glows={glows} />
 
-          <div className="w-full h-full flex items-center justify-center perspective-[2000px] absolute -top-[24rem]">
-            <div className="w-[700px] h-[700px] absolute rotate-x-60 flex items-start justify-center scale-200">
-              {/* <div className="w-180 h-180 absolute ring-1 rounded-full ring-gray-900" />  */}
-              <OrbitingCircles 
-                className="flex items-center justify-center gap-4 w-full h-full p-4 z-30 rotate-6 " 
-                radius={350} 
-              >
-                {Array(3).fill([...frontendTechnologies, ...backendTechnologies]).flat().map((technology, index) => (
-                  <Image 
-                    onClick={() => window.open(technology.url, "_blank")}
-                    key={index}
-                    src={technology.logo} 
-                    alt="logo"  
-                    width={12} 
-                    height={12}
-                    className="w-3 h-3 object-contain z-40 pointer-events-auto cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out hover:opacity-100 opacity-80"
-                  />
-                ))}
-              </OrbitingCircles>
-              <Compass />
-            </div>
+        <div className="w-full h-full flex items-center justify-center perspective-[2000px] absolute -top-[24rem]">
+          <div className="w-[700px] h-[700px] absolute rotate-x-60 flex items-start justify-center scale-200">
+            {/* <div className="w-180 h-180 absolute ring-1 rounded-full ring-gray-900" />  */}
+            {/* <OrbitingCircles 
+              className="flex items-center justify-center gap-4 w-full h-full p-4 z-30 rotate-6 " 
+              radius={350} 
+            >
+              {Array(3).fill([...frontendTechnologies, ...backendTechnologies]).flat().map((technology, index) => (
+                <Image 
+                  onClick={() => window.open(technology.url, "_blank")}
+                  key={index}
+                  src={technology.logo} 
+                  alt="logo"  
+                  width={12} 
+                  height={12}
+                  className="w-3 h-3 object-contain z-40 pointer-events-auto cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out hover:opacity-100 opacity-80"
+                />
+              ))}
+            </OrbitingCircles> */}
+            <Compass />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   )
 }
 
